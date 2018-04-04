@@ -4,7 +4,6 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
-        - /Global Plan1
         - /Local Plan1
       Splitter Ratio: 0.5
     Tree Height: 359
@@ -29,17 +28,22 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
-        - /Global Plan1
+        - /Grid1
+        - /Particle Cloud1
         - /Local Plan1
-        - /Planner Plan1
         - /LaserScan1
+        - /Global Costmap1
+        - /Map1
+        - /Path1
+        - /Map2
+        - /Map2/Status1
       Splitter Ratio: 0.5
     Tree Height: 589
 Visualization Manager:
   Class: ""
   Displays:
     - Alpha: 0.5
-      Cell Size: 1
+      Cell Size: 0.5
       Class: rviz/Grid
       Color: 160; 160; 164
       Enabled: true
@@ -53,17 +57,8 @@ Visualization Manager:
         Y: 0
         Z: 0
       Plane: XY
-      Plane Cell Count: 10
+      Plane Cell Count: 100
       Reference Frame: <Fixed Frame>
-      Value: true
-    - Alpha: 0.7
-      Class: rviz/Map
-      Color Scheme: map
-      Draw Behind: false
-      Enabled: true
-      Name: Static Map
-      Topic: /map
-      Unreliable: false
       Value: true
     - Arrow Length: 0.3
       Class: rviz/PoseArray
@@ -79,29 +74,6 @@ Visualization Manager:
       Enabled: true
       Name: Robot Footprint
       Topic: /move_base/global_costmap/obstacle_layer_footprint/footprint_stamped
-      Unreliable: false
-      Value: true
-    - Alpha: 1
-      Buffer Length: 10
-      Class: rviz/Path
-      Color: 25; 255; 0
-      Enabled: true
-      Head Diameter: 0.3
-      Head Length: 0.2
-      Length: 0.3
-      Line Style: Billboards
-      Line Width: 0.1
-      Name: Global Plan
-      Offset:
-        X: 0
-        Y: 0
-        Z: 0
-      Pose Color: 255; 85; 255
-      Pose Style: None
-      Radius: 0.03
-      Shaft Diameter: 0.1
-      Shaft Length: 0.1
-      Topic: /move_base/TrajectoryPlannerROS/global_plan
       Unreliable: false
       Value: true
     - Alpha: 1
@@ -125,29 +97,6 @@ Visualization Manager:
       Shaft Diameter: 0.1
       Shaft Length: 0.1
       Topic: /move_base/TrajectoryPlannerROS/local_plan
-      Unreliable: false
-      Value: true
-    - Alpha: 1
-      Buffer Length: 1
-      Class: rviz/Path
-      Color: 25; 255; 0
-      Enabled: true
-      Head Diameter: 0.3
-      Head Length: 0.2
-      Length: 0.3
-      Line Style: Lines
-      Line Width: 0.03
-      Name: Planner Plan
-      Offset:
-        X: 0
-        Y: 0
-        Z: 0
-      Pose Color: 255; 85; 255
-      Pose Style: None
-      Radius: 0.03
-      Shaft Diameter: 0.1
-      Shaft Length: 0.1
-      Topic: /move_base/NavfnROS/plan
       Unreliable: false
       Value: true
     - Alpha: 1
@@ -188,8 +137,8 @@ Visualization Manager:
       Axis: Z
       Channel Name: intensity
       Class: rviz/LaserScan
-      Color: 255; 255; 255
-      Color Transformer: Intensity
+      Color: 255; 0; 0
+      Color Transformer: FlatColor
       Decay Time: 0
       Enabled: true
       Invert Rainbow: false
@@ -270,8 +219,40 @@ Visualization Manager:
       Color Scheme: costmap
       Draw Behind: false
       Enabled: true
-      Name: Local Costmap
-      Topic: /move_base/local_costmap/costmap
+      Name: Global Costmap
+      Topic: /move_base/global_costmap/costmap
+      Unreliable: false
+      Value: true
+    - Alpha: 0.7
+      Class: rviz/Map
+      Color Scheme: map
+      Draw Behind: false
+      Enabled: true
+      Name: Map
+      Topic: /move_base/GlobalPlanner/potential
+      Unreliable: false
+      Value: true
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz/Path
+      Color: 25; 255; 0
+      Enabled: true
+      Head Diameter: 0.3
+      Head Length: 0.2
+      Length: 0.3
+      Line Style: Billboards
+      Line Width: 0.1
+      Name: Path
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Pose Color: 255; 85; 255
+      Pose Style: None
+      Radius: 0.03
+      Shaft Diameter: 0.1
+      Shaft Length: 0.1
+      Topic: /move_base/GlobalPlanner/plan
       Unreliable: false
       Value: true
     - Alpha: 0.7
@@ -279,8 +260,8 @@ Visualization Manager:
       Color Scheme: costmap
       Draw Behind: false
       Enabled: true
-      Name: Global Costmap
-      Topic: /move_base/global_costmap/costmap
+      Name: Map
+      Topic: /map
       Unreliable: false
       Value: true
   Enabled: true
@@ -306,7 +287,7 @@ Visualization Manager:
   Value: true
   Views:
     Current:
-      Angle: -0.0349999
+      Angle: 0.0150001
       Class: rviz/TopDownOrtho
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
@@ -315,11 +296,11 @@ Visualization Manager:
         Value: false
       Name: Current View
       Near Clip Distance: 0.01
-      Scale: 88.4089
+      Scale: 54.9079
       Target Frame: <Fixed Frame>
       Value: TopDownOrtho (rviz)
-      X: 2.30417
-      Y: -1.73835
+      X: 1.7795
+      Y: -4.0062
     Saved: ~
 Window Geometry:
   Displays:
@@ -337,5 +318,5 @@ Window Geometry:
   VTRPanel:
     collapsed: false
   Width: 1283
-  X: 399
-  Y: 119
+  X: 135
+  Y: 83

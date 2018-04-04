@@ -6,6 +6,7 @@
   </include> 
 
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+
     <param name="controller_frequency" value="10.0"/>
     <param name="controller_patiente" value="15.0"/>
 
@@ -19,7 +20,9 @@
     <rosparam file="$(find nav_sim)/cfg/base_local_planner_params.yaml" command="load" />
 
     <!-- Global Planner in ROS -->
+    <param name="base_global_planner" value="global_planner/GlobalPlanner"/>
     <!-- Please complete the global planner using API of ROS-->
+
   </node>
   
 </launch>
