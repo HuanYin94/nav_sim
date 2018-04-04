@@ -33,10 +33,8 @@ Panels:
         - /Local Plan1
         - /LaserScan1
         - /Global Costmap1
-        - /Map1
         - /Path1
-        - /Map2
-        - /Map2/Status1
+        - /Map1
       Splitter Ratio: 0.5
     Tree Height: 589
 Visualization Manager:
@@ -223,15 +221,6 @@ Visualization Manager:
       Topic: /move_base/global_costmap/costmap
       Unreliable: false
       Value: true
-    - Alpha: 0.7
-      Class: rviz/Map
-      Color Scheme: map
-      Draw Behind: false
-      Enabled: true
-      Name: Map
-      Topic: /move_base/GlobalPlanner/potential
-      Unreliable: false
-      Value: true
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
@@ -318,5 +307,5 @@ Window Geometry:
   VTRPanel:
     collapsed: false
   Width: 1283
-  X: 135
-  Y: 83
+  X: 115
+  Y: 63
