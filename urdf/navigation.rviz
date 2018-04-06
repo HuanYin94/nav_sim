@@ -21,8 +21,6 @@ Panels:
     Name: Time
     SyncMode: 0
     SyncSource: LaserScan
-  - Class: vtr_rviz_plugin/VTRPanel
-    Name: VTRPanel
   - Class: rviz/Displays
     Help Height: 78
     Name: Displays
@@ -304,8 +302,6 @@ Window Geometry:
     collapsed: false
   Tool Properties:
     collapsed: true
-  VTRPanel:
-    collapsed: false
   Width: 1283
   X: 96
   Y: 83
