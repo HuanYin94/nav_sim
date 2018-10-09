@@ -21,7 +21,10 @@
 
     <!-- Global Planner in ROS -->
     <param name="base_global_planner" value="global_planner/GlobalPlanner"/>
-    <!-- Please complete the global planner using API of ROS-->
+    
+	<!-- TASK Please complete the global planner using API of ROS-->
+
+	<!--XXXXXXXXXX UP XXXXXXXXXX-->
 
   </node>
   
