@@ -8,7 +8,7 @@
   <remap from="robot/laser/scan" to="/scan"/>
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="world_name" value="$(find nav_sim)/urdf/wall.world"/>
+    <arg name="world_name" value="$(find nav_sim)/urdf/empty.world"/>
     <arg name="use_sim_time" value="$(arg use_sim_time)"/>
     <arg name="debug" value="$(arg debug)" />
     <arg name="gui" value="$(arg gui)" />
@@ -28,6 +28,6 @@
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/>
 
   <!-- Run the map server -->
-   <node name="map_server" pkg="map_server" type="map_server" args="$(find nav_sim)/maps/map.yaml" output="screen"/>
+   <node name="map_server" pkg="map_server" type="map_server" args="$(find nav_sim)/maps/tmp4.yaml" output="screen"/>
 
 </launch>
