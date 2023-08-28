@@ -17,12 +17,12 @@
   <!-- Load the URDF into the ROS Parameter Server -->
   <arg name="model" default="$(find nav_sim)/urdf/myrobot.xacro" />
   <param name="robot_description" command="$(find xacro)/xacro $(arg model)" />
- 
+
   <!-- Run a python script to send a service call the gazebo_ros to spawn a URDF robot -->
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-	args="-urdf -model robot -param robot_description -z 0.05"/> 
+	args="-urdf -model robot -param robot_description -z 0.05"/>
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find nav_sim)/urdf/navigation.rviz"/>
-	
+
   <!--Run publishers-->
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
